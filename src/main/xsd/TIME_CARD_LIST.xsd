@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="TIME_CARD_LIST">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TIME_CARD" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ACTION" type="xs:string"></xs:element>
+							<xs:element name="TIME_CARD_ID" type="xs:int"></xs:element>
+							<xs:element name="HR_TERM_ID" type="xs:int"></xs:element>
+							<xs:element name="HR_ASSIGNMENT_ID" type="xs:int"></xs:element>
+							<xs:element name="TIME_CARD_START" type="xs:string"></xs:element>
+							<xs:element name="TIME_CARD_END" type="xs:string"></xs:element>
+							<xs:element name="TIME_ITEM_LIST">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="TIME_ITEM" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="TIME_TYPE" type="xs:string"></xs:element>
+													<xs:element name="TIME_UNIT" type="xs:int"></xs:element>
+													<xs:element name="TIME_UOM" type="xs:string"></xs:element>
+													<xs:element name="TIME_ITEM_START" type="xs:string"></xs:element>
+													<xs:element name="TIME_ITEM_END" type="xs:string"></xs:element>
+													<xs:element name="PROPERTIES_LIST">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="PROPERTY_ITEM" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="NAME" type="xs:string"></xs:element>
+																			<xs:element name="VALUE" type="xs:int"></xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
